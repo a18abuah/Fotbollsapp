@@ -5,14 +5,16 @@ import java.util.HashMap;
 public class Fotboll {
     private String name;
     private String location;
-    private String company;
+    private String league;
     private String category;
+    private String currentcup;
     private int cost;
     private int size;
-    public Fotboll (String stringname, String stringcompany,String stringcategory,String stringlocation,int intcost, int intsize){
+    public Fotboll (String stringname, String inLeague,String stringcategory,String stringlocation,int intcost, int intsize){
         name=stringname;
         location=stringlocation;
-        company=stringcompany;
+        league=inLeague;
+        currentcup="15";
         category=stringcategory;
         cost=intcost;
         size=intsize;
@@ -22,7 +24,7 @@ public class Fotboll {
         str+="\nHeter";
         str+=location;
         str+="\nLigger i ";
-        str+=company;
+        str+=league;
         str+="\nSpelare i ";
         str+=category;
         str+="\nSporten ";
@@ -37,6 +39,19 @@ public class Fotboll {
     }
 
     public String toString() {return name;}
+
+    public void Setleague (String inleague) {league=inleague;}
+
+    public String getLeague() {String inleague=league; return inleague;}
+
+
+
+    public void setCurrentcup (String incup) {
+
+        // f.currentCup("EuropaLeague");
+        currentcup=incup;
+
+    }
 
 }
 

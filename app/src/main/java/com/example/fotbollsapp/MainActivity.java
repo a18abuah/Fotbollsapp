@@ -1,5 +1,6 @@
 package com.example.fotbollsapp;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         new FetchData().execute();
-        ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), R.layout.list_item_textview,
+        final ArrayAdapter<Fotboll> adapter = new ArrayAdapter(getApplicationContext(), R.layout.list_item_textview,
                 R.id.my_item_textView, Abboberg);
 
 
@@ -79,7 +80,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText( getApplicationContext(),Abboberg.get(position).info() , Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(),  Fotboll2.class);
 
+                Fotboll f = adapter.getItem(position);
+
+                intent.putExtra("League",f.getLeague());
+                //intent.putExtra("berg", mountainNames [position]  );
+
+                startActivity(intent);
             }
 
 
