@@ -20,8 +20,14 @@ public class Fotboll2 extends AppCompatActivity {
         Intent incomingIntent =getIntent();
         String incomingName =incomingIntent.getStringExtra("name");
         String  datastring =incomingIntent.getStringExtra("location");
-        Log.d(TAG, "oncreate: Found incoming name: " +incomingName);
-        incomingData.setText(incomingName);
-        data.setText(datastring);
+        String  leaguestring =incomingIntent.getStringExtra("league");
+        int sizeint =incomingIntent.getIntExtra("size", 0);
+        /*String  Premierleaguewins =String.valueOf(incomingIntent).getInt("hej");
+        String  facupswins =incomingIntent.getStringExtra("FaCupwins");
+        Log.d(TAG, "oncreate: Found incoming name: " +Premierleaguewins);*/
+        data.setText(incomingName);
+        incomingData.setText("location: "+datastring + "\n" + "league: "+leaguestring +"\n" + "points: "+sizeint );
+        // data.setText(leaguestring);
+
     }
 }

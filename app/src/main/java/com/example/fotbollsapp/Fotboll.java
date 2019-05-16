@@ -8,9 +8,11 @@ public class Fotboll {
     private String league;
     private String category;
     private String currentcup;
+   /* private int PremierLeaguewins;
+    private int FaCupwins;*/
     private int cost;
     private int size;
-    public Fotboll (String stringname, String inLeague,String stringcategory,String stringlocation,int intcost, int intsize){
+    public Fotboll(String stringname, String inLeague, String stringcategory, String stringlocation, int intcost, int intsize){
         name=stringname;
         location=stringlocation;
         league=inLeague;
@@ -18,6 +20,8 @@ public class Fotboll {
         category=stringcategory;
         cost=intcost;
         size=intsize;
+        /*this.PremierLeaguewins=premierLeaguewins;
+        this.FaCupwins=faCupwins;*/
     }
     public String info () {
         String str=name;
@@ -40,19 +44,79 @@ public class Fotboll {
 
     public String toString() {return name;}
 
-    public void Setleague (String inleague) {league=inleague;}
-
-    public String getLeague() {String inleague=league; return inleague;}
-
-
-
-    public void setCurrentcup (String incup) {
-
-        // f.currentCup("EuropaLeague");
-        currentcup=incup;
-
+    public void setName(String inname) {
+        this.name = inname;
     }
 
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public void setLeague(String league) {
+        this.league = league;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public void setCurrentcup(String currentcup) {
+        this.currentcup = currentcup;
+    }
+
+    public void setCost(int cost) {
+        this.cost = cost;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public String getName() {
+        String inname=name;
+        return inname;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public String getLeague() {
+        return league;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public String getCurrentcup() {
+        return currentcup;
+    }
+
+    public int getCost() {
+        return cost;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    /*public void setPremierLeaguewins(int premierLeaguewins) {
+        PremierLeaguewins = premierLeaguewins;
+    }
+
+    public void setFaCupwins(int faCupwins) {
+        FaCupwins = faCupwins;
+    }
+
+    public int getPremierLeaguewins() {
+        return PremierLeaguewins;
+    }
+
+    public int getFaCupwins() {
+        return FaCupwins;
+    }*/
 }
+
 
 
