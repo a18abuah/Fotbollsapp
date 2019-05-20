@@ -22,11 +22,11 @@ public class Fotboll2 extends AppCompatActivity {
         String  datastring =incomingIntent.getStringExtra("location");
         String  leaguestring =incomingIntent.getStringExtra("league");
         int sizeint =incomingIntent.getIntExtra("size", 0);
-        /*String  Premierleaguewins =String.valueOf(incomingIntent).getInt("hej");
-        String  facupswins =incomingIntent.getStringExtra("FaCupwins");
-        Log.d(TAG, "oncreate: Found incoming name: " +Premierleaguewins);*/
+        int  premierlegauewins =incomingIntent.getIntExtra("PremierLeaguewins",0);
+        int  facupswins =incomingIntent.getIntExtra("FaCupwins",0);
+        //Log.d(TAG, "oncreate: Found incoming name: " +Premierleaguewins);
         data.setText(incomingName);
-        incomingData.setText("location: "+datastring + "\n" + "league: "+leaguestring +"\n" + "points: "+sizeint );
+        incomingData.setText("location: "+datastring + "\n" + "league: "+leaguestring +"\n" + "points: "+sizeint  +"\n"  + "premierlegaue wins: "+premierlegauewins +"\n" +  "FaCup wins: "+ facupswins );
         // data.setText(leaguestring);
 
     }

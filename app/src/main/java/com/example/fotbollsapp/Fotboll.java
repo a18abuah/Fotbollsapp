@@ -1,18 +1,16 @@
 package com.example.fotbollsapp;
 
-import java.util.HashMap;
-
 public class Fotboll {
     private String name;
     private String location;
     private String league;
     private String category;
     private String currentcup;
-   /* private int PremierLeaguewins;
-    private int FaCupwins;*/
+   private int  PremierLeaguewins;
+   private int  FaCupwins;
     private int cost;
     private int size;
-    public Fotboll(String stringname, String inLeague, String stringcategory, String stringlocation, int intcost, int intsize){
+    public Fotboll(String stringname, String inLeague, String stringcategory, String stringlocation, int intcost, int intsize,int premierLeaguewins,int faCupwins){
         name=stringname;
         location=stringlocation;
         league=inLeague;
@@ -20,8 +18,8 @@ public class Fotboll {
         category=stringcategory;
         cost=intcost;
         size=intsize;
-        /*this.PremierLeaguewins=premierLeaguewins;
-        this.FaCupwins=faCupwins;*/
+        PremierLeaguewins=premierLeaguewins;
+        FaCupwins=faCupwins;
     }
     public String info () {
         String str=name;
@@ -101,7 +99,7 @@ public class Fotboll {
         return size;
     }
 
-    /*public void setPremierLeaguewins(int premierLeaguewins) {
+    public void setPremierLeaguewins(int premierLeaguewins) {
         PremierLeaguewins = premierLeaguewins;
     }
 
@@ -115,7 +113,7 @@ public class Fotboll {
 
     public int getFaCupwins() {
         return FaCupwins;
-    }*/
+    }
 }
 
 

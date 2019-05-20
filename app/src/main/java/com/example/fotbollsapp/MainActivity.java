@@ -88,8 +88,8 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("location",f.getLocation());
                 intent.putExtra("league",f.getLeague());
                 intent.putExtra("size",f.getSize());
-                /*intent.putExtra("PremierLeaguewins",f.getPremierLeaguewins());
-                intent.putExtra("FaCupwins",f.getFaCupwins());*/
+                intent.putExtra("PremierLeaguewins",f.getPremierLeaguewins());
+                intent.putExtra("FaCupwins",f.getFaCupwins());
 
                 //intent.putExtra("berg", mountainNames [position]  );
                 startActivity(intent);
@@ -177,9 +177,16 @@ public class MainActivity extends AppCompatActivity {
                     String Fotbollscategory=Abbo.getString("category");
                     int Fotbollscost = Abbo.getInt("cost");
                     int Fotbollssize = Abbo.getInt("size");
+                    String auxdata = Abbo.getString("auxdata");
+
+                    JSONObject auxobjekt= new JSONObject(auxdata);
+                    int Premierleaguewins = auxobjekt.getInt("PremierLeaguewins");
+                    int Facupswins = auxobjekt.getInt("FaCupwins");
+
+                    Log.d("test3" ,""+auxobjekt.getInt("PremierLeaguewins") );
                     // (String stringname, String inLeague,String stringcategory,String stringlocation,int intcost, int intsize)
                    // Log.d("test1 JsonElement: ", "\t" + Fotbollsnamn + " " + Premierleaguewins + " " + Fawins);
-                    Abboberg.add(new Fotboll(Fotbollsnamn,Fotbollscompany, Fotbollscategory, Fotbollslocation, Fotbollscost,Fotbollssize));
+                    Abboberg.add(new Fotboll(Fotbollsnamn,Fotbollscompany, Fotbollscategory, Fotbollslocation, Fotbollscost,Fotbollssize,Premierleaguewins,Facupswins));
 
                 }
                 ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), R.layout.list_item_textview,
@@ -193,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             } catch (JSONException e) {
-                Log.e("test1","E:"+e.getMessage());
+                Log.e("test4","E:"+e.getMessage());
             }
             // This code executes after we have received our data. The String object o holds
             // the un-parsed JSON string or is null if we had an IOException during the fetch.
