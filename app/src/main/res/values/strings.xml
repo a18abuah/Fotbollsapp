@@ -2,4 +2,5 @@
     <string name="app_name" translatable="false">Fotbollsapp</string>
     <string name="action_settings" translatable="false">Settings</string>
     <string name="action_refresh" translatable="false">Updatera</string>
+    <string name="action_AboutPage" translatable="false">About</string>
 </resources>
