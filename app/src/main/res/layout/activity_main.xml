@@ -6,9 +6,11 @@
     android:layout_height="match_parent">
 
     <ListView
+        android:id="@+id/my_listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/my_listView">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="52dp">
 
     </ListView>
 
