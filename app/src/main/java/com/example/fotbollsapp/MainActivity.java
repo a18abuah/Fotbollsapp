@@ -52,11 +52,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public  boolean onOptionsItemSelected(MenuItem item) {
         int id=item.getItemId();
+        if (id == R.id.action_AboutPage){
+            Intent intent = new Intent(this, About.class);
+            startActivity(intent);
+            return true;
+        }
         if(id == R.id.action_refresh){
             new FetchData().execute();
             Abboberg.clear();
             return true;
         }
+
         return super.onOptionsItemSelected(item);
 
     }
