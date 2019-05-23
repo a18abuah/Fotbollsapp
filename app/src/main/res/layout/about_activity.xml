@@ -5,6 +5,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/action_AboutPage"/>
+
+        android:text="Denna app var skapad 2019-05-23. Den var skapad för dig som är fotbollsintresserad och vill se hur det går för ditt favorit premier league lag. På appen kan du se vart hemma arenan för lage
+ligger, poängen de har under den pågående sasongen och slutligen alla cupper de har vunnit sedan klubben var skapad."
+        android:textSize="20dp"
+        android:id="@+id/action_AboutPage"
+        />
 
 </android.support.constraint.ConstraintLayout>
